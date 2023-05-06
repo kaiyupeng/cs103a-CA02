@@ -1,0 +1,34 @@
+<h2>All Recipes</h2>
+<br>
+<a class="btn btn-primary" 
+    href="?sortBy=createdDate">Sort by Created Date</a>
+<a class="btn btn-primary" 
+    href="?sortBy=type">Sort by Type</a>
+<br><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th> 
+            <th>Type</th>
+            <th>Preferences</th>
+            <th>Restrictions</th>
+            <th>CreatedOn</th>
+            <th>Delete</th>
+            <th>View Details</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% recipes.forEach(recipe => { %>
+        <tr>
+            <td><%= recipe.title %></td>
+            <td><%= recipe.type %></td>
+            <td><%= recipe.preference %></td>
+            <td><%= recipe.restriction %></td>
+            <td><%= recipe.createdDate.toDateString() %></td>
+            <td><a href="/recipe/delete/<%= recipe._id %>">
+                <i class="bi bi-trash"></i></a></td>
+            <td><a href="/recipe/<%= recipe._id %>">View Details</a></td>
+        </tr>
+    <% }) %>    
+    </tbody>
+</table>

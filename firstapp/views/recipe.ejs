@@ -1,0 +1,20 @@
+<h2> Get your Recipe </h2>
+<br>
+<form method="post" action="/recipe">
+    <div class="mb-3">
+    <label for="type" class="form-label">Recipe type</label>
+    <input type="text" class="form-control" name="type" id="type" required>
+    <div class="form-text">Eg: main dish, dessert, side dish, etc.</div>
+    </div>
+    <div class="mb-3">
+    <label for="preference" class="form-label">Dietary preferences</label>
+    <input type="text" class="form-control" name="preference" id="preference">
+    </div>
+    <div class="mb-3">
+    <label for="restriction" class="form-label">Dietary restrictions</label>
+    <input type="text" class="form-control" name="restriction" id="restriction">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br><br><br>
+<a href="/recipe/index">View all my recipes</a>
